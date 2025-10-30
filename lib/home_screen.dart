@@ -34,6 +34,18 @@ class _HomeScreenState extends State<HomeScreen> {
           color: Colors.blue,
          ),
        ),
+       Dismissible(
+  key: ValueKey('card1'),
+  background: Container(color: Colors.red, child: Icon(Icons.delete)),
+  onDismissed: (_) => print("Item Deleted"),
+  child: Card(
+    child: ListTile(
+      title: Text("Swipe to delete me"),
+      leading: Icon(Icons.touch_app),
+    ),
+  ),
+)
+
       ],
     ));
   }
