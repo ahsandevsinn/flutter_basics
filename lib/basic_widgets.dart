@@ -27,3 +27,36 @@ class _BasicWidgetsState extends State<BasicWidgets> {
   }
 }
 
+class ListViewWidget extends StatefulWidget {
+  const ListViewWidget({super.key});
+
+  @override
+  State<ListViewWidget> createState() => _ListViewWidgetState();
+}
+
+class _ListViewWidgetState extends State<ListViewWidget> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("ListView"),),
+      body: ListView(
+        children: [
+          Container(
+            height: 300,
+            width: 300,
+            color: Colors.red,
+          ),
+                    Container(
+            height: 300,
+            width: 300,
+            color: Colors.black,
+          ),          Container(
+            height: 300,
+            width: 300,
+            color: Colors.blue,
+          ),
+        ],
+      ),
+    );
+  }
+}
