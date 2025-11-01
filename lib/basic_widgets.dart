@@ -11,22 +11,19 @@ class _BasicWidgetsState extends State<BasicWidgets> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      appBar: AppBar(),
+      body: Stack(
+    clipBehavior: Clip.none,
         children: [
-          Text("Hello World"),
-          Text("Hello World"),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text("Hello World"),
-              SizedBox(
-                width: 10,
-              ),
-              Text("Hello World"),
-            ],
-          )
+         Container(height: 200,width: 200,color: Colors.amber,),
+         Positioned(
+          top: 100,
+          bottom: -40,
+         
+          child: Container(height: 100,width: 100,color: Colors.blue,)),
         ],
       ),
     );
   }
 }
+
