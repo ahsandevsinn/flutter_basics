@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/basic_widgets.dart';
 import 'package:flutter_basics/counter_class.dart';
 import 'package:flutter_basics/home_screen.dart';
 import 'package:flutter_basics/stateful_widget.dart';
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-   home: HomeScreen(),
+   home: BasicWidgets(),
     );
   }
 }
