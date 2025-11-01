@@ -84,3 +84,33 @@ class _GridViewBuilderState extends State<GridViewBuilder> {
     );
   }
 }
+
+class ExpandedWidget extends StatefulWidget {
+  const ExpandedWidget({super.key});
+
+  @override
+  State<ExpandedWidget> createState() => _ExpandedWidgetState();
+}
+
+class _ExpandedWidgetState extends State<ExpandedWidget> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("Expanded"),),
+      body: Column(
+        children: [
+          // Expanded(
+          //   child: Container(
+          //     height: 100,width: 100,color: Colors.red,
+          //   ),
+          // ),
+Flexible(
+            child: Container(
+              height: 100,width: 100,color: Colors.red,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
