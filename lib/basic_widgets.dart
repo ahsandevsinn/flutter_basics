@@ -15,6 +15,16 @@ class _BasicWidgetsState extends State<BasicWidgets> {
         children: [
           Text("Hello World"),
           Text("Hello World"),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text("Hello World"),
+              SizedBox(
+                width: 10,
+              ),
+              Text("Hello World"),
+            ],
+          )
         ],
       ),
     );
