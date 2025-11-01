@@ -60,3 +60,27 @@ class _ListViewWidgetState extends State<ListViewWidget> {
     );
   }
 }
+
+class GridViewBuilder extends StatefulWidget {
+  const GridViewBuilder({super.key});
+
+  @override
+  State<GridViewBuilder> createState() => _GridViewBuilderState();
+}
+
+class _GridViewBuilderState extends State<GridViewBuilder> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("GridView"),),
+      body: GridView.builder(
+        
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,mainAxisSpacing: 10,crossAxisSpacing: 10,mainAxisExtent: 180), itemBuilder: (_,index){
+        return Container(
+        
+          color: Colors.blue,
+        );
+      }),
+    );
+  }
+}
